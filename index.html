@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>SPEED Soda — Cinematic Parallax Soda Experience</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="SPEED — a modern functional soda brand inspired by futuristic flavors but made with better ingredients."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Fullscreen loading overlay -->
+    <div id="page-loader" aria-hidden="true">
+      <div class="loader-inner">
+        <div class="loader-logo">SPEED</div>
+        <p class="loader-tagline">
+          A modern functional soda brand inspired by futuristic flavors but made with better ingredients.
+        </p>
+        <div class="loader-bar">
+          <div class="loader-bar-fill"></div>
+        </div>
+        <div class="loader-percent">Loading 0%</div>
+      </div>
+    </div>
+
+    <!-- Sticky site header -->
+    <header id="site-header">
+      <div class="header-inner">
+        <a href="#hero" class="brand">
+          <span class="brand-mark">SPEED</span>
+        </a>
+        <nav class="main-nav" aria-label="Primary">
+          <a href="#product" data-nav-target="product" class="nav-link is-active">Product</a>
+          <a href="#ingredients" data-nav-target="ingredients" class="nav-link">Ingredients</a>
+          <a href="#nutrition" data-nav-target="nutrition" class="nav-link">Nutrition</a>
+          <a href="#reviews" data-nav-target="reviews" class="nav-link">Reviews</a>
+          <a href="#faq" data-nav-target="faq" class="nav-link">FAQ</a>
+          <a href="#contact" data-nav-target="contact" class="nav-link">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <main>
+      <section id="hero" aria-label="Featured drink">
+        <canvas id="hero-sequence"></canvas>
+        <img id="hero-video" class="hero-video" alt="" aria-hidden="true" />
+
+        <div class="hero-overlay">
+          <div class="hero-text" aria-live="polite">
+            <div class="hero-logo">SPEED</div>
+            <h1 class="hero-title" id="hero-title">LEMON PEPPER</h1>
+            <div class="hero-subtitle" id="hero-subtitle">SODA</div>
+            <p class="hero-description" id="hero-description">
+              A modern take on a classic soda with a perfect blend of sweet and tart, full of nostalgic flavor.
+            </p>
+            <div class="hero-ctas">
+              <button class="btn btn-ghost" type="button">ADD TO</button>
+              <button class="btn btn-solid" type="button">CART</button>
+            </div>
+          </div>
+
+          <div class="hero-center"></div>
+
+          <aside class="hero-variants" aria-label="Drink variants">
+            <div class="hero-variant-index" id="hero-variant-index">01</div>
+            <div class="hero-variant-nav">
+              <button class="variant-btn variant-prev" id="variant-prev" type="button" aria-label="Previous flavor">
+                <span class="variant-label">PREV</span>
+                <span class="variant-arrow">←</span>
+              </button>
+              <div class="hero-nav-divider"></div>
+              <button class="variant-btn variant-next" id="variant-next" type="button" aria-label="Next flavor">
+                <span class="variant-label">NEXT</span>
+                <span class="variant-arrow">→</span>
+              </button>
+            </div>
+            <div class="variant-loading" id="variant-loading" aria-live="polite"></div>
+          </aside>
+        </div>
+
+        <div class="hero-socials" aria-label="SPEED social links">
+          <a href="#" aria-label="SPEED on X (Twitter)" class="social-link">X</a>
+          <a href="#" aria-label="SPEED on Instagram" class="social-link">IG</a>
+          <a href="#" aria-label="SPEED on Facebook" class="social-link">FB</a>
+        </div>
+      </section>
+
+      <!-- Product / About -->
+      <section id="product" class="section section-product">
+        <div class="section-inner">
+          <div class="section-copy">
+            <h2>Speed up your senses.</h2>
+            <p>
+              SPEED is a modern functional soda brand built for the future. Inspired by nostalgic flavors but crafted
+              with better ingredients, every can is a cinematic moment in your day.
+            </p>
+            <p>
+              From bright Lemon Pepper to electric Watermelon, each variant is tuned to hit that perfect balance of
+              flavor, fizz, and feel-good.
+            </p>
+          </div>
+          <div class="section-media">
+            <figure class="product-figure">
+              <img
+                src="https://dxyifmjskhmskerqrqna.supabase.co/storage/v1/object/public/vids/watermeln.webp"
+                alt="SPEED Watermelon Soda can on a bold studio background with watermelon slices and dynamic lighting, showcasing the vibrant colors and modern design of the can in a cinematic style."
+                class="product-cta-image"
+                loading="lazy"
+              />
+              <figcaption>SPEED Watermelon Soda — our bold, watermelon-fueled showpiece.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ingredients & Benefits -->
+      <section id="ingredients" class="section section-ingredients">
+        <div class="section-inner">
+          <header class="section-header">
+            <h2>Ingredients &amp; Benefits</h2>
+            <p>Built with better choices so you can move at SPEED without compromise.</p>
+          </header>
+          <div class="ingredients-grid">
+            <div class="ingredient-card">
+              <h3>Real Flavor Extracts</h3>
+              <p>Bright, punchy notes drawn from real citrus, botanicals, and fruit-inspired flavors.</p>
+            </div>
+            <div class="ingredient-card">
+              <h3>Balanced Sweetness</h3>
+              <p>A precise mix of natural sweeteners for full flavor with a lighter impact.</p>
+            </div>
+            <div class="ingredient-card">
+              <h3>No Artificial Colors</h3>
+              <p>Clean, modern formulations without harsh dyes or heavy syrups.</p>
+            </div>
+            <div class="ingredient-card">
+              <h3>Functional Boost</h3>
+              <p>Selected ingredients to keep you focused, refreshed, and ready to move.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Nutrition Facts -->
+      <section id="nutrition" class="section section-nutrition">
+        <div class="section-inner">
+          <header class="section-header">
+            <h2>Nutrition Facts</h2>
+            <p>Designed to fit your flow — not slow it down.</p>
+          </header>
+          <div class="nutrition-card" aria-label="Example nutrition facts label">
+            <div class="nutrition-header">
+              <h3>Nutrition Facts</h3>
+              <p>Serving size 1 can (355 mL)</p>
+            </div>
+            <div class="nutrition-row strong">
+              <span>Calories</span>
+              <span>45</span>
+            </div>
+            <div class="nutrition-divider"></div>
+            <div class="nutrition-row">
+              <span>Total Fat</span>
+              <span>0 g</span>
+            </div>
+            <div class="nutrition-row">
+              <span>Sodium</span>
+              <span>35 mg</span>
+            </div>
+            <div class="nutrition-row">
+              <span>Total Carbohydrate</span>
+              <span>11 g</span>
+            </div>
+            <div class="nutrition-row sub">
+              <span>Total Sugars</span>
+              <span>9 g</span>
+            </div>
+            <div class="nutrition-row">
+              <span>Protein</span>
+              <span>0 g</span>
+            </div>
+            <div class="nutrition-footer">
+              <p>% Daily Values are based on a 2,000 calorie diet. Your values may be higher or lower depending on your
+                energy needs.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reviews / Social Proof -->
+      <section id="reviews" class="section section-reviews">
+        <div class="section-inner">
+          <header class="section-header">
+            <h2>Reviews</h2>
+            <p>What people say when SPEED hits their feed.</p>
+          </header>
+          <div class="reviews-grid">
+            <article class="review-card">
+              <div class="review-rating">★★★★★</div>
+              <p class="review-quote">
+                “The Lemon Pepper variant feels like a sci‑fi twist on a soda I grew up with. Crisp, bright, and
+                seriously addictive.”
+              </p>
+              <p class="review-author">— Alex, Founder &amp; Creative Director</p>
+            </article>
+            <article class="review-card">
+              <div class="review-rating">★★★★★</div>
+              <p class="review-quote">
+                “Watermelon SPEED tastes like a summer glitch in the best way possible. Huge flavor, zero crash.”
+              </p>
+              <p class="review-author">— Jordan, Product Designer</p>
+            </article>
+            <article class="review-card">
+              <div class="review-rating">★★★★☆</div>
+              <p class="review-quote">
+                “Feels premium without feeling precious. It’s the soda I actually want on my desk while I work.”
+              </p>
+              <p class="review-author">— Casey, Engineer</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section id="faq" class="section section-faq">
+        <div class="section-inner">
+          <header class="section-header">
+            <h2>FAQ</h2>
+            <p>Answers at the speed of a scroll.</p>
+          </header>
+          <div class="faq-list" id="faq-list">
+            <article class="faq-item">
+              <button class="faq-question" type="button">
+                <span>What makes SPEED different from regular soda?</span>
+                <span class="faq-toggle">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  SPEED is built around modern flavor design and ingredients that feel less heavy, more intentional, and
+                  better aligned with how you actually move through your day.
+                </p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-question" type="button">
+                <span>Is SPEED high in sugar?</span>
+                <span class="faq-toggle">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Each variant is formulated to balance sweetness with clarity so you get the flavor hit you want
+                  without an overwhelming sugar spike.
+                </p>
+              </div>
+            </article>
+            <article class="faq-item">
+              <button class="faq-question" type="button">
+                <span>When are new flavors released?</span>
+                <span class="faq-toggle">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  We release new SPEED variants in limited drops. Join the list below to hear about the next launch
+                  first.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final Call-to-Action / Contact -->
+      <section id="contact" class="section section-cta">
+        <div class="section-inner section-inner-cta">
+          <div class="cta-copy">
+            <h2>Catch the SPEED of flavor.</h2>
+            <p>
+              Be the first to know when new futuristic flavors drop. SPEED is built for late nights, big ideas, and
+              every moment in between.
+            </p>
+            <div class="hero-ctas">
+              <button class="btn btn-solid" type="button">NOTIFY ME</button>
+              <button class="btn btn-ghost" type="button">FIND NEAR YOU</button>
+            </div>
+          </div>
+          <form class="cta-form" action="#" method="post">
+            <label class="field-label" for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+              required
+            />
+            <button class="btn btn-solid btn-block" type="submit">Join the list</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer id="site-footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <div class="footer-logo">SPEED</div>
+          <p class="footer-tagline">
+            A modern functional soda brand inspired by futuristic flavors but made with better ingredients.
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="#product">About</a>
+          <a href="#contact">Contact</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+        </div>
+        <div class="footer-socials">
+          <a href="#" aria-label="SPEED on X (Twitter)" class="social-link">X</a>
+          <a href="#" aria-label="SPEED on Instagram" class="social-link">IG</a>
+          <a href="#" aria-label="SPEED on Facebook" class="social-link">FB</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© <span id="footer-year"></span> SPEED. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="./main.js" type="module"></script>
+  </body>
+</html>
+
